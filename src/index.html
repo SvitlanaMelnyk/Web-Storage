@@ -1,0 +1,75 @@
+<!--
+	TP 1 Programmation	interactive	client-serveur
+	Exercice	1 :	Web	Storage	– Liste	des	 visiteurs	en	local.
+	Auteur : Melnyk Svitlana et Kravchenko Iana
+	Date : juin 2018
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Web	Storage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+
+        <!-- Entête de la page -->
+        <h3 class="text-center">Web	Storage	– Liste	des	 visiteurs	en	local</h3>
+        <br>
+
+        <!-- Le corps de la page-->
+        <!-- Tableau d'affichage -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Courriel</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody class="bg-primary text-white" id="tbody">
+            </tbody>
+        </table>
+        <br>
+        <div class="container">
+            <div id="erreur"></div>
+
+            <!-- Formulaire -->
+            <form onsubmit="return false">
+                <div class="form-group row">
+                    <label for="inputPrenom" class="col-sm-2 col-form-label">Prénom</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="inputPrenom">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputNom" class="col-sm-2 col-form-label">Nom</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="inputNom" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputCourriel" class="col-sm-2 col-form-label">Courriel</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="inputCourriel" >
+                    </div>
+                </div>
+                <input id="inputModification" type="hidden" name="modification" value="">
+                <div class="form-group row">
+                    <div class="col-sm-6 d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-primary" id="annuler">Annuler</button>
+                        <button type="submit" class="btn btn-primary mr-2" id="sauver">Sauver</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

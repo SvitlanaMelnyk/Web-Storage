@@ -1,0 +1,16 @@
+/**
+ * TP 1 Programmation	interactive	client-serveur
+ * Exercice	1 :	Web	Storage	– Liste	des	 visiteurs	en	local.
+ * Auteur : Melnyk Svitlana et Kravchenko Iana
+ * Date : juin 2018
+ */
+
+.modifier, .supprimer{
+     cursor: pointer;
+}
+.modifier:hover, .supprimer:hover{
+    text-decoration: underline;
+}
+#erreur {
+    color: red;
+}
